@@ -1,0 +1,54 @@
+name: Build
+on:
+  push:
+    branches: [ next.js ]
+  pull_request:
+    branches: [ next.js ]
+jobs:
+  matrix:
+    name: Prepare matrix
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+    - name: Set matrix
+      id: set-matrix
+      run: echo "::set-output name=matrix::{\"node-version\":[\"12.x\",\"14.x\"]}"
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: matrix
+    strategy:
+      matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Use Node.js v${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      uses: bahmutov/npm-install@HEAD
+    - name: Build page
+      run: yarn build
+    - name: Cache build
+      uses: actions/cache@v2
+      id: cache-build
+      with:
+        path: ./*
+        key: build-${{ matrix.node-version }}-${{ github.sha }}
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: [matrix, build]
+    strategy:
+      matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
+    steps:
+    - name: Restore build
+      uses: actions/cache@v2
+      id: restore-build
+      with:
+        path: ./*
+        key: build-${{ matrix.node-version }}-${{ github.sha }}
+    - name: Test
+      run: yarn test

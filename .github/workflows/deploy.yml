@@ -1,0 +1,39 @@
+name: Deploy
+on:
+  push:
+    branches: [ next.js ]
+jobs:
+  deploy-gh-pages:
+    name: Deploy static page to gh-pages
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Use Node.js v${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      uses: bahmutov/npm-install@HEAD
+    - name: Build and export page
+      run: yarn export
+    - name: Fix gh-pages
+      run: touch out/.nojekyll
+    - name: Prepare deployment commit
+      run: |
+        echo 'COMMIT_MESSAGE<<EOF' >> $GITHUB_ENV
+        git log --format='%B' -1 >> $GITHUB_ENV
+        echo >> $GITHUB_ENV
+        git log --format='Built from %H' -1 >> $GITHUB_ENV
+        echo 'EOF' >> $GITHUB_ENV
+    - name: Deploy page
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: out
+        CLEAN: true
+        COMMIT_MESSAGE: ${{ env.COMMIT_MESSAGE }}

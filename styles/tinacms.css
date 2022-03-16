@@ -1,0 +1,40 @@
+:root {
+	--custom-tina-color-grey-0: theme("colors.white");
+	--custom-tina-color-grey-1: theme("colors.gray.100");
+	--custom-tina-color-grey-2: theme("colors.gray.200");
+	--custom-tina-color-grey-3: theme("colors.gray.300");
+	--custom-tina-color-grey-4: theme("colors.gray.400");
+	--custom-tina-color-grey-5: theme("colors.gray.500");
+	--custom-tina-color-grey-6: theme("colors.gray.600");
+	--custom-tina-color-grey-7: theme("colors.gray.700");
+	--custom-tina-color-grey-8: theme("colors.gray.800");
+	--custom-tina-color-grey-9: theme("colors.gray.900");
+	--custom-tina-color-grey-10: theme("colors.black");
+}
+
+html,
+body {
+	--tina-color-primary-light: var(--accent-secondary);
+	--tina-color-primary: var(--accent-primary);
+	--tina-color-primary-dark: var(--accent-secondary);
+	--tina-color-error-light: theme("colors.red.400");
+	--tina-color-error: theme("colors.red.500");
+	--tina-color-error-dark: theme("colors.red.600");
+	--tina-color-warning-light: theme("colors.yellow.400");
+	--tina-color-warning: theme("colors.yellow.500");
+	--tina-color-warning-dark: theme("colors.yellow.600");
+	--tina-color-success-light: theme("colors.green.400");
+	--tina-color-success: theme("colors.green.500");
+	--tina-color-success-dark: theme("colors.green.600");
+	--tina-color-grey-0: var(--custom-tina-color-grey-0);
+	--tina-color-grey-1: var(--custom-tina-color-grey-1);
+	--tina-color-grey-2: var(--custom-tina-color-grey-2);
+	--tina-color-grey-3: var(--custom-tina-color-grey-3);
+	--tina-color-grey-4: var(--custom-tina-color-grey-4);
+	--tina-color-grey-5: var(--custom-tina-color-grey-5);
+	--tina-color-grey-6: var(--custom-tina-color-grey-6);
+	--tina-color-grey-7: var(--custom-tina-color-grey-7);
+	--tina-color-grey-8: var(--custom-tina-color-grey-8);
+	--tina-color-grey-9: var(--custom-tina-color-grey-9);
+	--tina-color-grey-10: var(--custom-tina-color-grey-10);
+}

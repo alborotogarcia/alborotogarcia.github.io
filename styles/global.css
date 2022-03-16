@@ -1,0 +1,39 @@
+:root {
+	--bg-bg-primary: theme("colors.gray.100");
+	--bg-bg-code: theme("colors.gray.800");
+	--text-text-primary: theme("colors.gray.900");
+	--text-text-primary-light: theme("colors.gray.800");
+	--text-text-secondary: theme("colors.gray.700");
+	--text-text-secondary-light: theme("colors.gray.600");
+	--text-text-tertiary: theme("colors.gray.500");
+	--text-text-tertiary-light: theme("colors.gray.400");
+	--text-text-code: theme("colors.gray.300");
+	--accent-primary: theme("colors.blue.500");
+	--accent-secondary: theme("colors.blue.700");
+	--accent-tertiary: theme("colors.blue.400");
+}
+
+[data-theme='dark'] {
+	--bg-bg-primary: theme("colors.gray.900");
+	--bg-bg-code: theme("colors.gray.800");
+	--text-text-primary: theme("colors.gray.200");
+	--text-text-primary-light: theme("colors.gray.300");
+	--text-text-secondary: theme("colors.gray.400");
+	--text-text-secondary-light: theme("colors.gray.500");
+	--text-text-tertiary: theme("colors.gray.700");
+	--text-text-tertiary-light: theme("colors.gray.800");
+	--text-text-code: theme("colors.gray.300");
+	--accent-primary: theme("colors.blue.700");
+	--accent-secondary: theme("colors.blue.800");
+	--accent-tertiary: theme("colors.blue.500");
+}
+
+html,
+body {
+	background: var(--bg-bg-primary);
+	color: var(--text-text-primary);
+}
+
+.prose ol ol,.prose ol ul,.prose ul ol,.prose ul ul{
+	font-size:.96em;
+}
