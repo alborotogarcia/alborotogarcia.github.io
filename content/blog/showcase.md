@@ -3,7 +3,9 @@ title: Showcase demo post
 date: '2022-03-16T19:45:32Z'
 author: Alboroto García
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget rutrum nisi, eu varius risus. Nam gravida, velit ac faucibus pharetra, ligula tortor ullamcorper nibh, sit amet hendrerit velit enim et sapien. Morbi varius dignissim est vel feugiat. Morbi rutrum tempor dignissim. Nunc ultrices quam nisl, et tincidunt sapien rutrum vel. Etiam at metus quam. Donec condimentum diam in est lacinia tempus. Morbi sit amet lorem at metus mattis ultrices eu nec nisl. Etiam a dapibus leo, quis maximus dolor. Quisque ullamcorper enim at justo venenatis lacinia. Morbi nisi nibh, auctor ut magna a, vestibulum placerat leo. Curabitur ullamcorper lacus leo, eu lobortis enim consequat vulputate. Praesent pellentesque nunc purus, lobortis fringilla est sagittis eget. Suspendisse vitae ante mollis, gravida metus sit amet, pellentesque lectus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget rutrum nisi, eu varius risus. Nam gravida, velit ac faucibus pharetra, ligula tortor ullamcorper nibh, sit amet hendrerit velit enim et sapien. Morbi varius dignissim est vel feugiat. Morbi rutrum tempor dignissim. Nunc ultrices quam nisl, et tincidunt sapien rutrum vel. Etiam at metus quam. Donec condimentum diam in est lacinia tempus. Morbi sit amet lorem at metus mattis ultrices eu nec nisl. Etiam a dapibus leo, quis maximus dolor. Quisque ullamcorper enim at justo venenatis lacinia. Morbi nisi nibh, auctor ut magna a, vestibulum placerat leo. Curabitur ullamcorper lacus leo, eu lobortis enim consequat vulputate. Praesent pellentesque nunc purus, lobortis fringilla est sagittis eget. 
+
+Suspendisse vitae ante mollis, gravida metus sit amet, pellentesque lectus.
 
 This is a [link](/blog).
 
